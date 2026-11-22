@@ -1,0 +1,16 @@
+#!/bin/bash
+# PerlaOS - Compilar schemas de GNOME y permisos
+
+set -e
+
+echo "Compilando schemas de GNOME..."
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+
+# Permisos de los comandos PerlaOS
+chmod 755 /usr/local/lib/perla/comandos.sh
+chmod 644 /etc/profile.d/perla-comandos.sh
+
+# Asegurar que el directorio de fondos existe
+mkdir -p /usr/share/backgrounds/perlaos
+
+echo "Schemas y permisos listos."
