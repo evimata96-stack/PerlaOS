@@ -1,0 +1,36 @@
+# PerlaOS - Branding de Calamares
+componentName:  perlaos
+
+welcomeStyleCalamares:   false
+welcomeExpandingLogo:    true
+
+windowExpanding:    normal
+windowSize:     900px,620px
+windowPlacement: center
+
+strings:
+    productName:         PerlaOS
+    shortProductName:    PerlaOS
+    version:             1.0 Nácar
+    shortVersion:        1.0
+    versionedName:       PerlaOS 1.0 Nácar
+    shortVersionedName:  PerlaOS 1.0
+    bootloaderEntryName: PerlaOS
+    productUrl:          https://perlaos.org
+    supportUrl:          https://perlaos.org/ayuda
+    knownIssuesUrl:      https://github.com/evimata96-stack/PerlaOS/issues
+    releaseNotesUrl:     https://perlaos.org/notas
+    donateUrl:           https://perlaos.org/donar
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "logo.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#4B2E83"
+   sidebarText:          "#F5F0FA"
+   sidebarTextSelect:    "#C084FC"
+   sidebarTextHighlight: "#7B4FA6"
