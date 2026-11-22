@@ -19,13 +19,31 @@
 
 ## Características principales
 
-- Base: Debian Stable (Trixie)
-- Escritorio: GNOME
-- Instalador: Calamares (en español)
-- Capa de comandos en español (`instalar`, `copia`, `borra`, `ayuda`...)
-- Tema visual propio (Perla-purple)
-- Asistente de bienvenida
-- Solo amd64 en la versión 1.0
+- **Base:** Debian Stable (Trixie)
+- **Escritorio:** GNOME
+- **Instalador:** Calamares (en español)
+- **Capa de comandos en español:** `instalar`, `copia`, `borra`, `ayuda`, `que_version`...
+- **Tema visual propio** (Perla-purple)
+- **Solo amd64** en la versión 1.0
+
+### Comandos en español disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `instalar <paquete>` | Instala un programa |
+| `desinstalar <paquete>` | Elimina un programa |
+| `buscar <texto>` | Busca programas |
+| `actualizar` | Actualiza el sistema |
+| `limpia` | Limpia paquetes innecesarios |
+| `entra <carpeta>` | Entra en una carpeta |
+| `crea_carpeta <nombre>` | Crea una carpeta |
+| `copia / mueve / borra` | Gestión de archivos |
+| `lista` / `arbol` | Listar archivos |
+| `que_version` | Muestra la versión de PerlaOS |
+| `cuanto_espacio` | Espacio en disco |
+| `red` | Estado de la red |
+| `reinicia` / `apaga` | Control del equipo |
+| `ayuda` o `perla` | Muestra la ayuda |
 
 ---
 
@@ -39,13 +57,18 @@
 
 ```
 PerlaOS/
-├── config/                  # Configuración de live-build
-│   ├── package-lists/       # Listas de paquetes
-│   ├── includes.chroot/     # Archivos que se copian al sistema
-│   └── hooks/               # Scripts de personalización
-├── branding/                # Logo, wallpapers, tema
+├── branding/                # Logo, tema, wallpapers
+│   ├── logo/
+│   └── theme/
 ├── calamares/               # Configuración del instalador
-├── docs/                    # Documentación
+│   └── branding/perlaos/
+├── docs/                    # Documentación y especificación
+├── live-build/              # Configuración de live-build
+│   ├── auto/
+│   └── config/
+│       ├── package-lists/
+│       ├── includes.chroot/
+│       └── hooks/
 └── scripts/                 # Scripts de construcción
 ```
 
@@ -54,27 +77,50 @@ PerlaOS/
 ## Cómo construir la ISO (desarrollo)
 
 ```bash
-# Requisitos
+# Requisitos (en Debian/Ubuntu)
 sudo apt install live-build
 
+# Clonar
+git clone https://github.com/evimata96-stack/PerlaOS.git
+cd PerlaOS
+
 # Construir
+cd live-build
 sudo lb clean
 sudo lb config
 sudo lb build
 ```
 
+La ISO se generará en el directorio `live-build/`.
+
+> **Nota:** La construcción completa puede tardar entre 30 y 90 minutos.
+
 ---
 
 ## Estado del proyecto
 
-| Fase | Contenido                              | Estado     |
-|------|----------------------------------------|------------|
-| 0    | Definición                             | ✅ Hecho   |
-| 1    | Identidad visual                       | 🟡 En curso |
-| 2    | ISO funcional (live-build + Calamares) | 🟡 En curso |
-| 3    | Utilidades propias                     | ⬜ Pendiente |
-| 4    | Pruebas beta                           | ⬜ Pendiente |
-| 5    | Lanzamiento 1.0 "Nácar"                | ⬜ Pendiente |
+| Fase | Contenido                                      | Estado       |
+|------|------------------------------------------------|--------------|
+| 0    | Definición                                     | ✅ Hecho     |
+| 1    | Identidad visual (logo, paleta, tema)          | 🟡 Avanzado  |
+| 2    | ISO funcional (live-build + Calamares + comandos) | 🟡 En curso |
+| 3    | Utilidades propias (asistente, centro de ayuda)| ⬜ Pendiente |
+| 4    | Pruebas beta                                   | ⬜ Pendiente |
+| 5    | Lanzamiento 1.0 "Nácar"                        | ⬜ Pendiente |
+
+---
+
+## Identidad visual
+
+**Paleta oficial:**
+
+| Color              | Hex       | Uso                        |
+|--------------------|-----------|----------------------------|
+| Violeta profundo   | `#4B2E83` | Fondo principal            |
+| Violeta medio      | `#7B4FA6` | Acentos secundarios        |
+| Acento brillante   | `#C084FC` | Highlights, botones        |
+| Blanco perlado     | `#F5F0FA` | Texto, fondos claros       |
+| Oscuro base        | `#1A1025` | Fondos oscuros             |
 
 ---
 
