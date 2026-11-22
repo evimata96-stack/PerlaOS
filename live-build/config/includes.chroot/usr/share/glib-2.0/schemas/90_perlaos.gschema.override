@@ -1,0 +1,54 @@
+# ============================================================
+# PerlaOS - Ajustes por defecto de GNOME
+# ============================================================
+
+[org.gnome.desktop.interface]
+color-scheme='prefer-dark'
+accent-color='purple'
+gtk-theme='Adwaita-dark'
+icon-theme='Adwaita'
+cursor-theme='Adwaita'
+font-name='Noto Sans 11'
+document-font-name='Noto Sans 11'
+monospace-font-name='Noto Sans Mono 11'
+clock-show-weekday=true
+clock-format='24h'
+enable-hot-corners=false
+show-battery-percentage=true
+
+[org.gnome.desktop.wm.preferences]
+button-layout='appmenu:minimize,maximize,close'
+titlebar-font='Noto Sans Bold 11'
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/perlaos/perlaos-default.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/perlaos/perlaos-default.jpg'
+picture-options='zoom'
+primary-color='#1A1025'
+secondary-color='#4B2E83'
+
+[org.gnome.desktop.screensaver]
+picture-uri='file:///usr/share/backgrounds/perlaos/perlaos-default.jpg'
+picture-options='zoom'
+primary-color='#1A1025'
+
+[org.gnome.shell]
+favorite-apps=['org.gnome.Nautilus.desktop', 'firefox-esr.desktop', 'org.gnome.Software.desktop', 'libreoffice-writer.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Settings.desktop']
+
+[org.gnome.desktop.input-sources]
+sources=[('xkb', 'es')]
+xkb-options=['grp:alt_shift_toggle']
+
+[org.gnome.system.locale]
+region='es_ES.UTF-8'
+
+[org.gnome.desktop.calendar]
+show-weekdate=true
+
+[org.gnome.nautilus.preferences]
+default-folder-viewer='list-view'
+show-hidden-files=false
+
+[org.gnome.software]
+download-updates=true
+download-updates-notify=true
