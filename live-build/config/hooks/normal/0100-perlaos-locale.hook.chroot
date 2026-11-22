@@ -1,0 +1,23 @@
+#!/bin/bash
+# PerlaOS - Configuración de idioma y locale
+
+set -e
+
+echo "Configurando locale español..."
+
+# Generar locales
+sed -i 's/# es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/' /etc/locale.gen
+locale-gen
+
+# Establecer locale por defecto
+update-locale LANG=es_ES.UTF-8 LC_ALL=es_ES.UTF-8
+
+# Configurar teclado español
+echo 'XKBLAYOUT="es"' > /etc/default/keyboard
+echo 'XKBVARIANT=""' >> /etc/default/keyboard
+echo 'BACKSPACE="guess"' >> /etc/default/keyboard
+
+# Zona horaria por defecto (se puede cambiar en el instalador)
+ln -sf /usr/share/zoneinfo/America/Mexico_City /etc/localtime
+
+echo "Locale configurado."
