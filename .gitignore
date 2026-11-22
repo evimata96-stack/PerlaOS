@@ -1,0 +1,24 @@
+# Live-build artifacts
+cache/
+chroot/
+binary/
+binary.iso
+*.iso
+*.img
+*.tar
+*.tar.gz
+*.log
+.build/
+.config/
+.stage/
+
+# Temporales
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
