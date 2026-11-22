@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fondo circular sutil -->
+  <defs>
+    <radialGradient id="pearlGradient" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#F8F4FC"/>
+      <stop offset="40%" stop-color="#E8D5F5"/>
+      <stop offset="75%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#7B4FA6"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#4B2E83" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spiralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#4B2E83"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Resplandor -->
+  <circle cx="256" cy="256" r="240" fill="url(#glow)"/>
+
+  <!-- Espiral estilizada (guiño a Debian) -->
+  <path d="M256 120 
+           C 340 120, 390 170, 390 256
+           C 390 340, 340 390, 256 390
+           C 190 390, 150 350, 150 290
+           C 150 240, 180 210, 230 210
+           C 270 210, 295 235, 295 275
+           C 295 305, 275 325, 245 325
+           C 225 325, 210 310, 210 290"
+        fill="none" stroke="url(#spiralGrad)" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Perla central -->
+  <circle cx="256" cy="256" r="78" fill="url(#pearlGradient)"/>
+  
+  <!-- Brillo de la perla -->
+  <ellipse cx="230" cy="225" rx="28" ry="18" fill="white" opacity="0.55" transform="rotate(-25 230 225)"/>
+  <circle cx="275" cy="270" r="8" fill="white" opacity="0.25"/>
+</svg>
