@@ -1,0 +1,31 @@
+#!/bin/sh
+set -e
+
+lb config noauto \
+    --mode debian \
+    --distribution trixie \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --architectures amd64 \
+    --binary-images iso-hybrid \
+    --bootappend-live "boot=live components locales=es_ES.UTF-8 keyboard-layouts=es timezone=America/Mexico_City quiet splash" \
+    --debian-installer none \
+    --iso-application "PerlaOS" \
+    --iso-preparer "PerlaOS Project" \
+    --iso-publisher "PerlaOS Project" \
+    --iso-volume "PerlaOS 1.0 Nacar" \
+    --memtest none \
+    --win32-loader false \
+    --apt-recommends true \
+    --firmware-binary true \
+    --firmware-chroot true \
+    --security true \
+    --updates true \
+    --mirror-bootstrap "https://deb.debian.org/debian/" \
+    --mirror-binary "https://deb.debian.org/debian/" \
+    --linux-flavours "amd64" \
+    --bootloaders "syslinux,grub-efi" \
+    --checksums "sha256" \
+    --chroot-filesystem "squashfs" \
+    --compression "xz" \
+    --system live \
+    "${@}"
