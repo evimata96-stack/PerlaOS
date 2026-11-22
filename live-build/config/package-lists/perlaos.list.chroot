@@ -1,0 +1,110 @@
+# ============================================================
+# PerlaOS - Lista de paquetes principales
+# ============================================================
+
+# --- Escritorio GNOME ---
+gnome-core
+gnome-session
+gnome-shell
+gnome-terminal
+gnome-control-center
+gnome-software
+gnome-software-plugin-flatpak
+nautilus
+file-roller
+evince
+loupe
+totem
+gnome-calculator
+gnome-calendar
+gnome-contacts
+gnome-clocks
+gnome-text-editor
+gnome-weather
+gnome-system-monitor
+gnome-disk-utility
+gnome-screenshot
+yelp
+gdm3
+
+# --- Audio / Video moderno ---
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+libspa-0.2-bluetooth
+
+# --- Red ---
+network-manager
+network-manager-gnome
+wireless-tools
+wpasupplicant
+firmware-linux
+firmware-linux-nonfree
+firmware-iwlwifi
+firmware-realtek
+firmware-atheros
+firmware-misc-nonfree
+
+# --- Productividad ---
+libreoffice-writer
+libreoffice-calc
+libreoffice-impress
+libreoffice-l10n-es
+libreoffice-help-es
+firefox-esr
+firefox-esr-l10n-es-es
+
+# --- Multimedia y códecs ---
+vlc
+gstreamer1.0-plugins-base
+gstreamer1.0-plugins-good
+gstreamer1.0-plugins-bad
+gstreamer1.0-plugins-ugly
+gstreamer1.0-libav
+gstreamer1.0-vaapi
+
+# --- Impresión ---
+cups
+cups-client
+cups-bsd
+printer-driver-all
+system-config-printer
+avahi-daemon
+libnss-mdns
+
+# --- Utilidades del sistema ---
+sudo
+bash-completion
+curl
+wget
+git
+htop
+neofetch
+tree
+unzip
+zip
+p7zip-full
+rsync
+timeshift
+
+# --- Fuentes e idiomas ---
+locales
+locales-all
+fonts-noto
+fonts-noto-core
+fonts-noto-ui-core
+fonts-liberation
+
+# --- Flatpak (opcional, para GNOME Software) ---
+flatpak
+
+# --- Instalador ---
+calamares
+calamares-settings-debian
+
+# --- Extras útiles ---
+gnome-browser-connector
+chrome-gnome-shell
+dconf-editor
+gsettings-desktop-schemas
